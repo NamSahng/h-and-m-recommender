@@ -1,5 +1,3 @@
-/.ipynb_checkpoints
-/h-and-m-personalized-fashion-recommendations
-/other_data
-/recsys_basic
-/temp
+/data/
+**/*.ipynb_checkpoints/
+__pycache__/

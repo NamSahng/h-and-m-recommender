@@ -1,6 +1,7 @@
 
 # https://www.kaggle.com/c/h-and-m-personalized-fashion-recommendations/discussion/306007
 # https://github.com/benhamner/Metrics/blob/master/Python/ml_metrics/average_precision.py
+
 import numpy as np
 
 def apk(actual, predicted, k=10):
