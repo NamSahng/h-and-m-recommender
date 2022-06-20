@@ -1,5 +1,11 @@
 # Buy it again
 
+
+Implementation of Buy it again on H&M kaggle dataset
+
+- detailed version: https://github.com/NamSahng/h-and-m-recommender/blob/main/src/buyitagain/notebooks/buyitagain_customer_article_detailed.ipynb
+- simplified version: https://github.com/NamSahng/h-and-m-recommender/blob/main/src/buyitagain/notebooks/buyitagain_simplified.ipynb
+
 <br>
 
 ## Problem Formulation
@@ -14,9 +20,9 @@
 
 ## Repeated Customer Probability Model
 - Formula:\
-$$ P_{A_i}(t_{k+1}|t_{1},t_{2}, ... t_{k}) \approx Q(A_{i}) \approx RCP_{A_{i}} = {{\mathrm{\# \ of \ customers \ who \ bought \ product \ A_{i} \ more \ than \ once}}\over{\mathrm{\# \ of \ customers \ who \ bought \ product \ A\_{i} \ at \ least \ once}}} $$
+$$ P_{A_i}(t_{k+1}|t_{1},t_{2}, ... t_{k}) \approx Q(A_{i}) \approx RCP_{A_{i}} = {{\text{number of customers who bought prodcut Ai more than once}}\over{\text{number of customers who bought prodcut Ai at least once}}} $$
 
-- recommendation: $RCP_{A_i} > r_{threshold}$
+- recommend by: $RCP_{A_i} > r_{threshold}$
 
 ### cf) Aggregate Time Distribution Model
 - Formula:
@@ -37,13 +43,13 @@ where,
     $$R_{A_{i}, C_{j}}(t)=\sum_{m=1}^{\infty} \frac{\lambda_{A_{i}, C_{j}}^{m} \exp \left(\lambda_{A_{i}, C_{j}}\right)}{m !}, \ \ t>0$$ 
 
 - m: number of expected future purchases
-- gamma prior on $\lambda$, assume that $\lambda$ across all customers follows a Gamma distribution with shape $\alpha$ and rate $\beta$.
+- gamma prior on $\ \lambda $, assume that $\ \lambda $ across all customers follows a Gamma distribution with shape $\ \alpha $ and rate $\ \beta $.
     - when $t > 2 \times t_{mean}$
 $$\lambda_{A_{i}, C_{j}}=\frac{k+\alpha_{A_{i}}} {t+\beta_{A_{i}}}, \ \ t>0$$ 
         - In the PG model, the parameters of the product-specific gamma distributions are estimated in an empirical fashion by fitting them to the maximum likelihood estimates of the purchase rates of repeat purchasing customers.
-        - $\alpha_{A_{i}}$, $\beta_{A_{i}}$ : the shape and rate parameters of the gamma prior of product ${A_{i}}$
-        - k : the number of purchases of product ${A_{i}}$ by customer ${C_{j}}$; 
-        - t : elapsed time between the **first purchase** of product ${A_{i}}$ by customer ${C_{j}}$ and the current time
+        - $\alpha_{A_{i}} $, $\ \beta_{A_{i}} $ : the shape and rate parameters of the gamma prior of product ${A_{i}}$
+        - k : the number of purchases of product $\ {A_{i}} $ by customer $\ {C_{j}} $
+        - t : elapsed time between the **first purchase** of product $\ {A_{i}} $ by customer $\ {C_{j}} $ and the current time
 
     - when $t < 2 \times t_{mean}$: 
       $$ \lambda_{A_{i},C_{j}} = {{k+\alpha_{A_{i}}} \over {t_{purch} + 2  |t_{mean} \  - \ t| + \beta_{A_{i}}}} , \ \, t>0 $$
