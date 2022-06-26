@@ -1,3 +1,4 @@
+/src/trending_product_weekly/*.csv
 /data/images/
 /data/**/*.csv
 **/*.ipynb_checkpoints/
