@@ -1,0 +1,9 @@
+searchSpaceFile: nni_search_space_als.json
+trialCommand: python3 ./nni_train_als.py  # NOTE: change "python3" to "python" if you are using Windows
+trialConcurrency: 1
+tuner:
+  name: Anneal
+  classArgs:
+    optimize_mode: maximize
+trainingService:
+  platform: local

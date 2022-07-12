@@ -1,0 +1,12 @@
+{
+    "use_week_num" : {"_type": "randint", "_value": [1,12]},
+    "use_full_item": {"_type": "choice", "_value": [true, false]},
+
+    "model": {"_type": "choice", "_value": ["als"]},
+    "factors" : {"_type": "randint", "_value": [5,200] },
+    "regularization" : {"_type": "choice", "_value": [0.0001, 0.001, 0.01, 0.1]},
+    "bm25_weighting" : {"_type": "choice", "_value": [true, false]},
+    "use_gpu": {"_type": "choice", "_value": [true, false]},
+    "use_cg" : {"_type": "choice", "_value": [true, false]},
+    "iterations" : {"_type": "randint", "_value": [1,30]}
+}
