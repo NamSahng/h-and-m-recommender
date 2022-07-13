@@ -2,9 +2,9 @@
     "use_week_num" : {"_type": "randint", "_value": [1,12]},
     "use_full_item": {"_type": "choice", "_value": [true, false]},
 
-    "use_gpu": {"_type": "choice", "_value": [true, false]},
+    "use_gpu": {"_type": "choice", "_value": [false]},
     "model": {"_type": "choice", "_value": ["lmf"]},
-    "learning_rate": {"_type": "choice", "_value": [0.0001, 0.001, 0.01, 0.1, 1.0]},
+    "learning_rate": {"_type": "choice", "_value": [0.0001, 0.001, 0.01, 0.1, 0.99, 1.5]},
     "iterations" : {"_type": "randint", "_value": [1,150]},
     "regularization" : {"_type": "choice", "_value": [0.0001, 0.001, 0.01, 0.1]},
     "factors" : {"_type": "randint", "_value": [5,200] },
