@@ -1,5 +1,7 @@
 # Trending Product Weekly
 
+- If latex does not renders correctly, check below
+    - https://github.com/NamSahng/h-and-m-recommender/blob/main/src/trending_product_weekly/README.ipynb
 
 ## Prediction
 $$ V_{A_{i}C_{j}} = \Sigma_{m=1}^{n} value_{m} $$

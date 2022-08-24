@@ -24,11 +24,11 @@ h-and-m-recommender
     └── ...
 ```
 ## Experiments
-- buyitagain
+- [buyitagain](https://github.com/NamSahng/h-and-m-recommender/tree/main/src/buyitagain)
   - Implementation of Modified Poisson-Gamma Model (MPG) on H&M dataset.
-- implicit
+- [implicit](https://github.com/NamSahng/h-and-m-recommender/tree/main/src/implicit)
   - ALS, BPR, LMF Experiments on H&M dataset.
-- trending_product_weekly
+- [trending_product_weekly](https://github.com/NamSahng/h-and-m-recommender/tree/main/src/trending_product_weekly)
   - Follow exisiting kaggle repo and modifiy it using RCP & MPG.
 
 &nbsp;
