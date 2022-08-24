@@ -5,6 +5,8 @@
 
 - Data: 
   - download from: https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/data
+
+## Structure
 ```
 h-and-m-recommender
 ├── data
@@ -17,9 +19,19 @@ h-and-m-recommender
 │       └── ...
 └── src
     ├── buyitagain
+    └── implicit
+    └── trending_product_weekly
     └── ...
 ```
+## Experiments
+- buyitagain
+  - Implementation of Modified Poisson-Gamma Model (MPG) on H&M dataset.
+- implicit
+  - ALS, BPR, LMF Experiments on H&M dataset.
+- trending_product_weekly
+  - Follow exisiting kaggle repo and modifiy it using RCP & MPG.
 
+&nbsp;
 
 
 ## References
