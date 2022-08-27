@@ -19,7 +19,7 @@ $ nnictl create --config nni_config_{modelname}
     - LMF
         - <img src = "../../data/implicit/lmf.png" width="60%"> 
 - on Test
-    - <img src = "../../data/implicit/als_lmf_test.png" width="50%"> 
+    - <img src = "../../data/implicit/implicit_result.png" width="50%"> 
 
 ## References
 - ALS
