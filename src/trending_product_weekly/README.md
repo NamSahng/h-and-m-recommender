@@ -21,7 +21,7 @@ $$ f(t) = {{a}\over{\sqrt{t_{A_{i},C_{j}}}}} + b\exp(-c \times t_{A_{i},C_{j}}) 
 
 ### quotients
 - if Ai has been sold on last week
-$$ q_{m} = {{\text{num of sales on Ai in week k}}\over{\text{num of sales on Ai in last week of train set }}} $$
+$$ q_{m} = {{\text{num of sales on Ai in last week of train set }}\over{\text{num of sales on Ai in week k}}} $$
 - else:
 $$ q_{m} = 0 $$
 
